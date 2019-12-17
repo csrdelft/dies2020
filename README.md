@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/csrdelft/dies2019.svg?branch=master)](https://travis-ci.org/csrdelft/dies2019)
+[![Build Status](https://travis-ci.org/csrdelft/dies2020.svg?branch=master)](https://travis-ci.org/csrdelft/dies2020)
 
 # Dies 2020
 
-Dit is de broncode van de Motown Fever webstek, te vinden op [csrdelft.nl/dies/2020](https://csrdelft.nl/dies/2020/).
+Dit is de broncode van de Voortvarend webstek, te vinden op [csrdelft.nl/dies/2020](https://csrdelft.nl/dies/2020/).
 
 Voor de laatste build zie de [`gh-pages`](https://github.com/csrdelft/dies2020/tree/gh-pages) branch. 
 

@@ -10,7 +10,7 @@
 
     <title>Voortvarend - Dies 2020</title>
 
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon" href="${BASE_URL}favicon.ico">
 </head>
 
 <body>
@@ -18,7 +18,8 @@
 <nav class="site-header">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="logo-titel" href="#">
-            <img src="images/logo-menu.png" srcset="images/logo-menu.png 320w, images/logo-menu-2x.png 1900w"
+            <img src="${require('../src/assets/images/logo-menu.png')}"
+                 srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1900w"
                  alt="Logo menu"/>
         </a>
         <a class="py-2 d-none d-md-inline-block" href="#home">Home</a>
@@ -27,14 +28,13 @@
         <a class="py-2 d-none d-md-inline-block" href="#etiquette">Etiquette</a>
         <a class="py-2 d-none d-md-inline-block" href="#commissie">Commissie</a>
     </div>
-    <span class="bottom-border"></span>
 </nav>
 
 <section class="head">
     <div class="container">
         <div class="logo-container">
-            <img class="logo-groot" src="images/logo.png" alt="Logo"
-                 srcset="images/logo.png 1000w, images/logo-2x.png 1900w"/>
+            <img class="logo-groot" src="${require('../src/assets/images/logo.png')}" alt="Logo"
+                 srcset="${require('../src/assets/images/logo.png')} 1000w, ${require('../src/assets/images/logo-2x.png')} 1900w"/>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" width="805.06"
                  height="216.22">
                 <defs>
@@ -44,7 +44,7 @@
                         <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
                     </filter>
                 </defs>
-                <image xlink:href="images/titel.svg" filter="url(#dropshadow)"></image>
+                <image xlink:href=${require("../src/assets/images/titel.svg")} filter="url(#dropshadow)"></image>
             </svg>
         </div>
     </div>
@@ -67,7 +67,11 @@
     <h2>Programma</h2>
 
     <div class="container">
-        <img src="images/poster.jpg" alt="Programmaposter" srcset="images/poster.jpg 320w, images/poster-2x.jpg 1920w"/>
+        <img src="${require('../src/assets/images/poster.jpg')}" alt="Programmaposter"
+             srcset="${require('../src/assets/images/poster.jpg')} 320w, ${require('../src/assets/images/poster-2x.jpg')} 1920w"/>
+
+        <h3 class="draadje-link"><a href="${VUE_APP_DRAADJE_URL}">Klik hier om je aan te melden voor deze
+            activiteiten</a></h3>
     </div>
 </section>
 <section class="etiquette">
@@ -105,7 +109,6 @@
                 Traditioneel is de corsage een klein bloemstukje, maar de corsage kan ook een ludieke vorm aannemen. De
                 heer draagt de traditionele corsage op de linker revers met de bloem omhoog. De dame draagt de corsage
                 links onder het sleutelbeen met de bloem naar beneden.</p>
-            <!--            <div class="column-split"></div>-->
             <div>
                 <h3>Aanvang van het Gala</h3>
                 <h4>Kleding</h4>
@@ -201,39 +204,44 @@
     <h2>Commissie</h2>
     <div class="container">
         <div class="diescie-foto-container">
-            <div class="foto">
-                <img class="diescie-foto" src="images/diescie.jpg"
-                     srcset="images/diescie.jpg 320w, images/diescie-2x.jpg 2000w" alt="Dies Commissie"/>
-                <div class="commissie">
-                    <div>
-                        <div class="michelle"><strong>Michelle Aantjes-Voogt</strong>
-                            <div class="functie">Communicatie</div>
-                        </div>
+            <img class="diescie-foto" src="${require('../src/assets/images/diescie.jpg')}"
+                 srcset="${require('../src/assets/images/diescie.jpg')} 320w, ${require('../src/assets/images/diescie-2x.jpg')} 2000w"
+                 alt="Dies Commissie"/>
+            <div class="commissie">
+                <div>
+                    <div class="michelle">
+                        <strong>Michelle Aantjes-Voogt</strong>
+                        <div class="functie">Communicatie</div>
                     </div>
-                    <div>
-                        <div class="dennis"><strong>Dennis van de Ketterij</strong>
-                            <div class="functie">Acquisitie</div>
-                        </div>
+                </div>
+                <div>
+                    <div class="dennis">
+                        <strong>Dennis van de Ketterij</strong>
+                        <div class="functie">Acquisitie</div>
                     </div>
-                    <div>
-                        <div class="bram"><strong>Bram Joziasse</strong>
-                            <div class="functie">Praeses</div>
-                        </div>
+                </div>
+                <div>
+                    <div class="bram">
+                        <strong>Bram Joziasse</strong>
+                        <div class="functie">Praeses</div>
                     </div>
-                    <div>
-                        <div class="marin"><strong>Marin Salomons</strong>
-                            <div class="functie">Vormgeving</div>
-                        </div>
+                </div>
+                <div>
+                    <div class="marin">
+                        <strong>Marin Salomons</strong>
+                        <div class="functie">Vormgeving</div>
                     </div>
-                    <div>
-                        <div class="rebecca"><strong>Rebecca Kemeling</strong>
-                            <div class="functie">Kluskoningin</div>
-                        </div>
+                </div>
+                <div>
+                    <div class="rebecca">
+                        <strong>Rebecca Kemeling</strong>
+                        <div class="functie">Kluskoningin</div>
                     </div>
-                    <div>
-                        <div class="wesley"><strong>Wesley Kool</strong>
-                            <div class="functie">Fiscus</div>
-                        </div>
+                </div>
+                <div>
+                    <div class="wesley">
+                        <strong>Wesley Kool</strong>
+                        <div class="functie">Fiscus</div>
                     </div>
                 </div>
             </div>
@@ -241,5 +249,4 @@
     </div>
 </section>
 </body>
-
 </html>
