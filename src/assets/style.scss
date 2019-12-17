@@ -79,6 +79,7 @@ nav {
 
   .logo-titel {
     height: 40px;
+    text-align: center;
 
     img {
       clip-path: circle(50%);
@@ -91,12 +92,19 @@ nav {
 /* header */
 .logo-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .logo-groot {
     margin-bottom: -2px;
     max-width: 500px;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+  }
+
+  .titel {
+    max-width: 600px;
+    width: 100%;
   }
 }
 
@@ -185,22 +193,23 @@ nav {
 
     }
 
-    .michelle {
-      transform: translateY(0);
-    }
+    @include media-breakpoint-up(md) {
+      .michelle {
+        transform: translateY(0);
+      }
 
-    .dennis, .marin, .rebecca {
-      transform: translateY(40px);
-    }
+      .dennis, .marin, .rebecca {
+        transform: translateY(40px);
+      }
 
-    .bram {
-      transform: translateY(20px);
-    }
+      .bram {
+        transform: translateY(20px);
+      }
 
-    .wesley {
-      transform: translateY(10px);
+      .wesley {
+        transform: translateY(10px);
+      }
     }
-
     &:hover {
       transform: translateY(0);
       opacity: 1;
@@ -217,4 +226,19 @@ nav {
   font-size: 2em;
   text-align: center;
   margin: 1em;
+}
+
+@include media-breakpoint-down(md) {
+  .commissie {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+
+    & > div {
+      height: auto;
+      opacity: 1;
+      padding: 0.5em;
+      transform: translateY(0) !important;
+    }
+  }
 }

@@ -23,7 +23,7 @@
   height: 200px;
 }
 
-@media (max-width: 992px) { /* lg */
+@include media-breakpoint-down(lg) {
   .fluid-columns {
     column-count: 2;
   }
@@ -35,10 +35,7 @@
   }
 }
 
-@media (max-width: 768px) { /* md */
-  .video {
-    margin-top: -200px;
-  }
+@include media-breakpoint-down(md) {
   .fluid-columns {
     column-count: 1;
   }
@@ -47,7 +44,7 @@
   }
 }
 
-@media (max-width: 540px) { /* sm */
+@include media-breakpoint-down(sm) {
   .fluid-columns-4 {
     column-count: 1;
   }

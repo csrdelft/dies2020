@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
           content="Website voor de 58e dies der Civitas Studiosorum Reformatorum onder het thema Voortvarend.">
     <meta name="author" content="Gerben Oolbekkink">
 
     <title>Voortvarend - Dies 2020</title>
 
-    <link rel="icon" href="${BASE_URL}favicon.ico">
+<!--    <link rel="icon" href="${BASE_URL}favicon.ico">-->
 </head>
 
 <body>
 <a id="home"></a>
 <nav class="site-header">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <a class="logo-titel" href="#">
             <img src="${require('../src/assets/images/logo-menu.png')}"
                  srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1900w"
@@ -35,7 +35,7 @@
         <div class="logo-container">
             <img class="logo-groot" src="${require('../src/assets/images/logo.png')}" alt="Logo"
                  srcset="${require('../src/assets/images/logo.png')} 1000w, ${require('../src/assets/images/logo-2x.png')} 1900w"/>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" width="805.06"
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" width="805.06" class="titel"
                  height="216.22">
                 <defs>
                     <filter id="dropshadow" height="130%">
@@ -44,7 +44,7 @@
                         <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
                     </filter>
                 </defs>
-                <image xlink:href=${require("../src/assets/images/titel.svg")} filter="url(#dropshadow)"></image>
+                <image xlink:href=${require("../src/assets/images/titel.svg")} filter="url(#dropshadow)" x="0" y="0" width="765.06" height="156.22"></image>
             </svg>
         </div>
     </div>
@@ -55,7 +55,7 @@
     <div class="container">
         <div class="video-container">
             <div id="youtube" class="youtube-container closed">
-                <div class="embed-responsive embed-responsive-21by9">
+                <div class="embed-responsive embed-responsive-16by9">
                     <div class="embed-responsive-item" id="player"></div>
                 </div>
             </div>
