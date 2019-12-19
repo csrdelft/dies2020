@@ -1,9 +1,8 @@
-@import './vars';
-@import '~bootstrap/scss/bootstrap';
-@import './cols';
+@import 'vars';
+@import 'bootstrap';
+@import 'cols';
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -14,10 +13,6 @@ h2 {
 
 .programma-poster {
   padding: 0 5em;
-
-  img {
-    width: 100%;
-  }
 }
 
 .anchor {
@@ -82,10 +77,15 @@ nav {
   }
 
   .logo-titel {
-    height: 10px;
-    text-align: center;
+    height: 2em;
+    margin-left: -100px;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
 
     img {
+      background-color: $achtergrond;
       clip-path: circle(50%);
       margin-top: -75px;
       width: 200px;
@@ -95,13 +95,11 @@ nav {
 
 /* header */
 .logo-container {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .logo-groot {
-    margin-bottom: -2px;
     max-width: 500px;
     width: 100%;
   }
@@ -116,8 +114,6 @@ nav {
 
 .head {
   padding: 180px 0 0 0;
-
-  position: static;
 }
 
 .etiquette::after {
@@ -141,7 +137,7 @@ nav {
   width: 100%;
   padding: 10%;
   background: url(images/kader.png) no-repeat center center;
-  background-size: contain;
+  background-size: cover;
 
   .youtube-container {
     width: 100%;
@@ -213,6 +209,7 @@ nav {
         transform: translateY(10px);
       }
     }
+
     &:hover {
       transform: translateY(0);
       opacity: 1;

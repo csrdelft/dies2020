@@ -10,14 +10,15 @@
 
     <title>Voortvarend - Dies 2020</title>
 
-<!--    <link rel="icon" href="${BASE_URL}favicon.ico">-->
+    <!--    <link rel="icon" href="${BASE_URL}favicon.ico">-->
 </head>
 
 <body>
 <a id="home"></a>
 <nav class="site-header">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center my-1">
-        <a class="logo-titel" href="#">
+        <a class="logo-titel py-1 d-inline-block" href="#">
+            &nbsp;
             <img src="${require('../src/assets/images/logo-menu.png')}"
                  srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1900w"
                  alt="Logo menu"/>
@@ -34,10 +35,14 @@
     <div class="container">
         <div class="logo-container">
             <picture>
-                <source srcset="${require('../src/assets/images/logo.webp')}" media="(min-width: 320px)" type="image/webp">
-                <source srcset="${require('../src/assets/images/logo-2x.webp')}" media="(min-width: 1000px)" type="image/webp">
-                <source srcset="${require('../src/assets/images/logo.png')}" media="(min-width: 320px)" type="image/png">
-                <source srcset="${require('../src/assets/images/logo-2x.png')}" media="(min-width: 1000px)" type="image/png">
+                <source srcset="${require('../src/assets/images/logo.webp')}" media="(min-width: 320px)"
+                        type="image/webp">
+                <source srcset="${require('../src/assets/images/logo-2x.webp')}" media="(min-width: 1000px)"
+                        type="image/webp">
+                <source srcset="${require('../src/assets/images/logo.png')}" media="(min-width: 320px)"
+                        type="image/png">
+                <source srcset="${require('../src/assets/images/logo-2x.png')}" media="(min-width: 1000px)"
+                        type="image/png">
                 <img class="logo-groot" src="${require('../src/assets/images/logo.png')}" alt="Logo"/>
             </picture>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" width="805.06" class="titel"
@@ -49,7 +54,8 @@
                         <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
                     </filter>
                 </defs>
-                <image xlink:href=${require("../src/assets/images/titel.svg")} filter="url(#dropshadow)" x="0" y="0" width="765.06" height="156.22"></image>
+                <image xlink:href=${require("../src/assets/images/titel.svg")} filter="url(#dropshadow)" x="0" y="0"
+                       width="765.06" height="156.22"></image>
             </svg>
         </div>
     </div>
@@ -61,7 +67,10 @@
         <div class="video-container">
             <div id="youtube" class="youtube-container closed">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <div class="embed-responsive-item" id="player"></div>
+                    <iframe class="embed-responsive-item"
+                            src="https://www.youtube-nocookie.com/embed/E-r7ogDaaEQ?controls=0" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -72,7 +81,8 @@
     <h2>Programma</h2>
 
     <div class="container">
-        <img src="${require('../src/assets/images/poster.jpg')}" alt="Programmaposter"
+        <img class="img-fluid"
+             src="${require('../src/assets/images/poster.jpg')}" alt="Programmaposter"
              srcset="${require('../src/assets/images/poster.jpg')} 320w, ${require('../src/assets/images/poster-2x.jpg')} 1920w"/>
 
         <h3 class="draadje-link"><a href="${VUE_APP_DRAADJE_URL}">Klik hier om je aan te melden voor deze
@@ -209,7 +219,7 @@
     <h2>Commissie</h2>
     <div class="container">
         <div class="diescie-foto-container">
-            <img class="diescie-foto" src="${require('../src/assets/images/diescie.jpg')}"
+            <img class="diescie-foto img-fluid" src="${require('../src/assets/images/diescie.jpg')}"
                  srcset="${require('../src/assets/images/diescie.jpg')} 320w, ${require('../src/assets/images/diescie-2x.jpg')} 2000w"
                  alt="Dies Commissie"/>
             <div class="commissie">
