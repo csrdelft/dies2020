@@ -20,7 +20,7 @@
         <a class="logo-titel py-1 d-inline-block" href="#">
             &nbsp;
             <img src="${require('../src/assets/images/logo-menu.png')}"
-                 srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1900w"
+                 srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1000w"
                  alt="Logo menu"/>
         </a>
         <a class="py-1 d-none d-md-inline-block" href="#home">Home</a>
@@ -35,18 +35,13 @@
     <div class="container">
         <div class="logo-container">
             <picture>
-                <source srcset="${require('../src/assets/images/logo.webp')}" media="(min-width: 320px)"
-                        type="image/webp">
-                <source srcset="${require('../src/assets/images/logo-2x.webp')}" media="(min-width: 1000px)"
-                        type="image/webp">
                 <source srcset="${require('../src/assets/images/logo.png')}" media="(min-width: 320px)"
                         type="image/png">
                 <source srcset="${require('../src/assets/images/logo-2x.png')}" media="(min-width: 1000px)"
                         type="image/png">
                 <img class="logo-groot" src="${require('../src/assets/images/logo.png')}" alt="Logo"/>
             </picture>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" width="805.06" class="titel"
-                 height="216.22">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" class="titel">
                 <defs>
                     <filter id="dropshadow" height="130%">
                         <feOffset result="offOut" in="SourceAlpha" dx="-10" dy="10"></feOffset>
