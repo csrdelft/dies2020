@@ -32,6 +32,7 @@ h2 {
 section {
   padding: 180px 0 5em;
   position: relative;
+  min-height: 100vh;
 }
 
 /* nav */
@@ -52,13 +53,16 @@ nav {
     content: '';
     border-top: 2px solid $kleur-bruin;
     display: block;
+    bottom: 0.2rem;
+    width: 100%;
+    position: absolute;
   }
 
   &::before {
     border-bottom: 2px dotted #6F6E69;
     bottom: 50%;
     width: 100%;
-    top: calc(-0.2rem - 4px);
+    top: 0.2rem;
     position: absolute;
     z-index: 9;
   }
@@ -78,7 +82,7 @@ nav {
   }
 
   .logo-titel {
-    height: 40px;
+    height: 10px;
     text-align: center;
 
     img {
@@ -112,7 +116,6 @@ nav {
 
 .head {
   padding: 180px 0 0 0;
-  min-height: 100vh;
 
   position: static;
 }

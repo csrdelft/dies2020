@@ -16,25 +16,30 @@
 <body>
 <a id="home"></a>
 <nav class="site-header">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center my-1">
         <a class="logo-titel" href="#">
             <img src="${require('../src/assets/images/logo-menu.png')}"
                  srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1900w"
                  alt="Logo menu"/>
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="#home">Home</a>
-        <a class="py-2 d-none d-md-inline-block" href="#filmpje">Themafilmpje</a>
-        <a class="py-2 d-none d-md-inline-block" href="#programma">Programma</a>
-        <a class="py-2 d-none d-md-inline-block" href="#etiquette">Etiquette</a>
-        <a class="py-2 d-none d-md-inline-block" href="#commissie">Commissie</a>
+        <a class="py-1 d-none d-md-inline-block" href="#home">Home</a>
+        <a class="py-1 d-none d-md-inline-block" href="#filmpje">Themafilmpje</a>
+        <a class="py-1 d-none d-md-inline-block" href="#programma">Programma</a>
+        <a class="py-1 d-none d-md-inline-block" href="#etiquette">Etiquette</a>
+        <a class="py-1 d-none d-md-inline-block" href="#commissie">Commissie</a>
     </div>
 </nav>
 
 <section class="head">
     <div class="container">
         <div class="logo-container">
-            <img class="logo-groot" src="${require('../src/assets/images/logo.png')}" alt="Logo"
-                 srcset="${require('../src/assets/images/logo.png')} 1000w, ${require('../src/assets/images/logo-2x.png')} 1900w"/>
+            <picture>
+                <source srcset="${require('../src/assets/images/logo.webp')}" media="(min-width: 320px)" type="image/webp">
+                <source srcset="${require('../src/assets/images/logo-2x.webp')}" media="(min-width: 1000px)" type="image/webp">
+                <source srcset="${require('../src/assets/images/logo.png')}" media="(min-width: 320px)" type="image/png">
+                <source srcset="${require('../src/assets/images/logo-2x.png')}" media="(min-width: 1000px)" type="image/png">
+                <img class="logo-groot" src="${require('../src/assets/images/logo.png')}" alt="Logo"/>
+            </picture>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-20 0 805 220" width="805.06" class="titel"
                  height="216.22">
                 <defs>
